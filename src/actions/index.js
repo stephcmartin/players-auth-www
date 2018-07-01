@@ -8,7 +8,8 @@ export const register = (formProps, callback) => async dispatch => {
       'https://players-api.developer.alchemy.codes/api/user', 
       formProps);
 
-    dispatch({ type: AUTH_USER, payload: response.token});
+    dispatch({ type: AUTH_USER, payload: response.data.token});
+    localStorage.setItem('token', response.data.token);
     callback();
   } catch (e) {
     // CATCH anything that goes wrong with request

@@ -9,11 +9,14 @@ import reducers from './reducers'
 import App from './components/App';
 import Welcome from './components/Welcome';
 import RegisterForm from './components/auth/Register';
+import Roster from './components/Roster'
 import './index.css';
 
 const store= createStore(
   reducers,
-  {},
+  {
+    auth: { authenticated: localStorage.getItem('token') }
+  },
   applyMiddleware(reduxThunk))
 
 ReactDOM.render(
@@ -22,6 +25,7 @@ ReactDOM.render(
     <App>
       <Route path="/" exact component={Welcome} />
       <Route path="/register" component={RegisterForm} />
+      <Route path="/roster" component={Roster} />
     </App>
     </BrowserRouter>
   </Provider>
