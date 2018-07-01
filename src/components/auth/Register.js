@@ -2,15 +2,22 @@ import React , { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
 
 class RegisterForm extends Component {
+onSubmit = (formProps) => {
+  console.log(formProps)
+};
+
   render () {
+    const { handleSubmit } = this.props;
+
     return (
-      <form>
+      <form onSubmit={handleSubmit(this.onSubmit)}>
       <fieldset>
         <label>First Name:</label>
         <Field
         name="first_name"
         type="text"
         component="input"
+        autoComplete="none"
         />
 
       </fieldset>
@@ -21,6 +28,7 @@ class RegisterForm extends Component {
         name="last_name"
         type="text"
         component="input"
+        autoComplete="none"
         />
       </fieldset>
 
@@ -30,6 +38,7 @@ class RegisterForm extends Component {
         name="email"
         type="text"
         component="input"
+        autoComplete="none"
         />
       </fieldset>
 
@@ -39,6 +48,7 @@ class RegisterForm extends Component {
         name="password"
         type="password"
         component="input"
+        autoComplete="none"
         />
       </fieldset>
 
@@ -48,8 +58,11 @@ class RegisterForm extends Component {
         name="confirm_password"
         type="password"
         component="input"
+        autoComplete="none"
         />
       </fieldset>
+
+      <button>Register</button>  
       </form>
     )
   }
