@@ -9,7 +9,7 @@ import reducers from './reducers'
 import App from './components/App';
 import Welcome from './components/Welcome';
 import RegisterForm from './components/auth/Register';
-
+import './index.css';
 
 const store= createStore(
   reducers,

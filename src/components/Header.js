@@ -7,7 +7,7 @@ import './HeaderStyle.css';
 class Header extends Component {
   render (){
     return(
-      <div>
+      <div className="nav">
       <Link to="/">Home</Link>
       <Link to="/register">Register</Link>
       <Link to="/login">Login</Link>

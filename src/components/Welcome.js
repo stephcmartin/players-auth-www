@@ -1,10 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+
+import './Welcome.css'
 
 export default () => {
   return (
-      <div>
-      <h2>Welcome to beer league bowling!</h2>
-      <p>Register or Login to play against your friends.</p>
+      //
+
+
+      <div class="wrapper">
+      <div class="heading">
+        <span class="char1" data-heading="H">H</span>
+        <span class="char2" data-heading="E">E</span>
+        <span class="char3" data-heading="L">L</span>
+        <span class="char4" data-heading="L">L</span>
+        <span class="char5" data-heading="O">O</span>
       </div>
+    </div>
     )
 }
