@@ -1,9 +1,12 @@
 import React , { Component } from 'react';
 import { reduxForm, Field } from 'redux-form';
+import { compose } from 'redux'
+import { connect } from 'react-redux';
+import * as actions from '../../actions'
 
 class RegisterForm extends Component {
 onSubmit = (formProps) => {
-  console.log(formProps)
+  this.props.register(formProps)
 };
 
   render () {
@@ -61,11 +64,13 @@ onSubmit = (formProps) => {
         autoComplete="none"
         />
       </fieldset>
-
-      <button>Register</button>  
+      <button>Register</button>
       </form>
     )
   }
 }
 
-export default reduxForm({form: 'signup' })(RegisterForm);
+export default compose (
+  connect(null, actions),
+  reduxForm({form: 'register' })
+)(RegisterForm);

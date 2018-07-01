@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-
+import './HeaderStyle.css';
 
 // This will be a class based component
 
