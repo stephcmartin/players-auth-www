@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import requireAuth from './requireAuth'
 
 class Roster extends Component{
     render(){
@@ -10,4 +11,4 @@ class Roster extends Component{
     }
 }
 
-export default Roster;
+export default requireAuth(Roster);
