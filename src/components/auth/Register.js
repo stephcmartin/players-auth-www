@@ -7,7 +7,10 @@ import './Register.css'
 
 class RegisterForm extends Component {
 onSubmit = (formProps) => {
-  this.props.register(formProps)
+  this.props.register(formProps, () => {
+    this.props.history.push('roster');
+  });
+
 };
 
   render () {
@@ -16,7 +19,7 @@ onSubmit = (formProps) => {
     return (
       <div className="signupform">
       <div className="registerHeader">
-      Register
+      Sign Up
       </div>
       <form onSubmit={handleSubmit(this.onSubmit)}>
       <fieldset>
@@ -74,6 +77,12 @@ onSubmit = (formProps) => {
         autoComplete="none"
         />
       </fieldset>
+      <div>
+        <em>
+        <small>{this.props.errorMessage}
+        </small>
+        </em>
+      </div>
       <button>Register</button>
       </form>
       </div>
@@ -81,7 +90,11 @@ onSubmit = (formProps) => {
   }
 }
 
+function mapStateToProps(state){
+  return { errorMessage: state.auth.errorMessage };
+}
+
 export default compose (
-  connect(null, actions),
+  connect(mapStateToProps, actions),
   reduxForm({form: 'register' })
 )(RegisterForm);

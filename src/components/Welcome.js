@@ -1,13 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 import './Welcome.css'
 
 export default () => {
   return (
-      //
-
-
       <div class="wrapper">
       <div class="heading">
         <span class="char1" data-heading="H">H</span>
