@@ -10,6 +10,9 @@ import App from './components/App';
 import Welcome from './components/Welcome';
 import RegisterForm from './components/auth/Register';
 import Roster from './components/Roster'
+import Signout from './components/auth/Signout'
+import Login from './components/auth/Login'
+
 import './index.css';
 
 const store= createStore(
@@ -26,6 +29,8 @@ ReactDOM.render(
       <Route path="/" exact component={Welcome} />
       <Route path="/register" component={RegisterForm} />
       <Route path="/roster" component={Roster} />
+      <Route path="/login" component={Login} />
+      <Route path="/signout" component={Signout} />
     </App>
     </BrowserRouter>
   </Provider>
