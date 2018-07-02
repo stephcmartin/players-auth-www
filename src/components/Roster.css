@@ -1,0 +1,17 @@
+.rosterHeader{
+    text-align: center;
+    color: #00cabc;
+}
+
+.stats{
+    text-align: center;
+}
+
+.createPlayer{
+    text-align: center;
+    padding: 20px 0;
+}
+
+.roster Button{
+    background-color: red;
+}

@@ -1,10 +1,10 @@
-.nav {
+.header {
   display: flex;
-  justify-content: 20px;
-  padding-bottom: 40px;
+  justify-content: space-between;
+  padding-bottom: 20px;
 }
 
-.nav a {
+.header a {
   margin: 0 10px;
   font-weight: 500;
 }
