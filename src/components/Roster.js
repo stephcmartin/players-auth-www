@@ -17,11 +17,11 @@ class Roster extends Component{
                 <h4>Ma Long</h4>
                 <p>Rating: 9000</p>
                 <p>Handedness: right</p>
-                <Button bsStyle="danger">Delete</Button>
+                <Button onClick={()=>{alert('This player will be deleted')}}>Delete</Button>
                 </div>
             </div>
             <div className="createPlayer">
-            <Button bsStyle="danger">Add new player</Button>
+            <Button onClick={()=>{alert('Create new player')}}>Add new player</Button>
             </div>
         </div>
         )
